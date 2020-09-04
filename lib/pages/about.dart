@@ -327,19 +327,17 @@ class _AboutState extends State<About> with TickerProviderStateMixin {
               ),
             ),
             Container(
-              child: Expanded(
-                  child: ListView(
-                    children: <Widget>[
-                      for (var stats in _details['stats'].reversed.toList())
-                        Container(
-                          padding: EdgeInsets.symmetric(horizontal: 25),
-                          child: statsWidget(stats),
-                        ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                    ],
+              child: ListView(
+                children: <Widget>[
+                  for (var stats in _details['stats'].reversed.toList())
+                    Container(
+                      padding: EdgeInsets.symmetric(horizontal: 25),
+                      child: statsWidget(stats),
+                    ),
+                  SizedBox(
+                    height: 20,
                   ),
+                ],
               ),
             ),
             Container(
@@ -415,7 +413,7 @@ class _AboutState extends State<About> with TickerProviderStateMixin {
   }
 
   double getTransformWidth(value) {
-    return (200 * value) / 100;
+    return (190 * value) / 100;
   }
 
   Color getStatColor(int base) {
